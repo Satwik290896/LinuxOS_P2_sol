@@ -863,6 +863,11 @@ __SYSCALL(__NR_process_madvise, sys_process_madvise)
 #undef __NR_syscalls
 #define __NR_syscalls 441
 
+#define __NR_ptree 441
+__SYSCALL(__NR_ptree, sys_ptree)
+
+#undef __NR_syscalls
+#define __NR_syscalls (__NR_ptree+1)
 /*
  * 32 bit systems traditionally used different
  * syscalls for off_t and loff_t arguments, while
